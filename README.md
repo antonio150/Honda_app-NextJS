@@ -18,6 +18,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Development with Docker
+
+With Docker Compose v2.22.0 or newer, start the development server with Compose Watch so file changes are synchronized into the container:
+
+```bash
+docker compose up --watch
+```
+
+Then open [http://localhost:3000](http://localhost:3000). Stop the server with `Ctrl+C`.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
