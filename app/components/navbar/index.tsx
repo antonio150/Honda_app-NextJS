@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Menu from "./menu";
 
 
 export default function Navbar() {
@@ -9,12 +10,13 @@ export default function Navbar() {
     const [searchOpen, setSearchOpen] = useState(false);
 
     return (
-        <div className="w-full">
+        <div className="relative z-30 w-full">
             <nav className="flex items-center justify-between bg-white text-black p-2">
                 <button
                     type="button"
                     aria-label={menuOpen ? "Close menu" : "Open menu"}
                     aria-expanded={menuOpen}
+                    aria-controls="navbar-menu"
                     onClick={() => setMenuOpen((open) => !open)}
                     className="flex items-center gap-2"
                 >
@@ -56,6 +58,7 @@ export default function Navbar() {
                     </button>
                 </div>
             </nav>
+            {menuOpen && <Menu />}
             {searchOpen && (
                 <form
                     id="navbar-search"
