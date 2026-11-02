@@ -25,7 +25,7 @@ export default function Navbar() {
                             <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         )}
                     </svg>
-                    <span>Menu</span>
+                    <span className="hidden md:block">Menu</span>
                 </button>
                 <div className="flex items-center">
 
@@ -34,7 +34,7 @@ export default function Navbar() {
                     <Image  src={"/img/navbar/Olympics_logo.svg"} alt={"Olympics logo"} width={90} height={90} />
                 </div>
                 <div className="flex items-center gap-2">
-                    About us
+                    <span className="hidden md:block">About us</span> 
                     <button
                         type="button"
                         aria-label={searchOpen ? "Close search" : "Open search"}
