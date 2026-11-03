@@ -67,7 +67,7 @@ export default function Menu() {
         <nav
             id="navbar-menu"
             aria-label="Main menu"
-            className="absolute left-0 top-full z-50 max-h-[calc(100vh-4rem)] w-full overflow-y-auto bg-black p-4 text-white"
+            className="absolute left-0 top-full z-50 max-h-[calc(100vh-4rem)] w-full overflow-y-auto bg-white p-4 text-black"
         >
             <ul className="flex flex-col">
                 <li className="border-b border-gray-700">
@@ -86,7 +86,7 @@ export default function Menu() {
                                 aria-expanded={isOpen}
                                 aria-controls={sectionId}
                                 onClick={() => setOpenSection(isOpen ? null : title)}
-                                className="flex w-full items-center gap-3 py-3 text-left hover:text-gray-300"
+                                className="flex w-full items-center gap-3 py-3 text-left hover:text-black"
                             >
                                 <span aria-hidden="true" className="w-4 text-center text-xl leading-none">
                                     {isOpen ? "−" : "+"}
@@ -99,7 +99,7 @@ export default function Menu() {
                                         <li key={label}>
                                             <Link
                                                 href="#"
-                                                className="block py-2 text-gray-300 hover:text-white"
+                                                className="block py-2 text-black hover:text-grey-300"
                                             >
                                                 {label}
                                             </Link>
