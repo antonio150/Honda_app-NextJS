@@ -70,7 +70,7 @@ export default function Header() {
 
   return (
     <header className="border-b border-gray-200 bg-black">
-      <div className="flex items-center  gap-2 py-2">
+      <div className="flex items-center  gap-1 py-1">
         {showLeftArrow && (
           <button
             type="button"
@@ -101,9 +101,9 @@ export default function Header() {
             className="hide-scrollbar flex items-center justify-center gap-1 overflow-x-auto scroll-smooth whitespace-nowrap"
           >
             {headerItems.map((item) => (
-              <div key={item.label} className="flex shrink-0 items-center gap-2 px-3 py-1">
-                <Image src={item.src} alt={item.label} width={15} height={15} />
-                <a href="#" className="text-xs text-white">
+              <div key={item.label} className="flex shrink-0 items-center gap-1 px-3 py-1">
+                <Image src={item.src} alt={item.label} width={19} height={19} />
+                <a href="#" className="text-[11px] text-white">
                   {item.label}
                 </a>
               </div>

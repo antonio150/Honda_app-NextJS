@@ -350,7 +350,7 @@ export default function Slide() {
       ) : null}
 
       <div className="absolute  inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent md:from-black/70 md:via-black/20" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center  px-16 pt-29 ">
+      <div className="absolute inset-0 top-20 flex flex-col items-center justify-center  px-16 pt-29 ">
         <div className="flex max-w-5xl flex-col items-center gap-5">
           <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-4xl">
             {activeSlide.titre}
