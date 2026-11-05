@@ -10,7 +10,7 @@ export default function Navbar() {
     const [searchOpen, setSearchOpen] = useState(false);
 
     return (
-        <div className="relative z-30 w-full">
+        <div className="sticky top-0  z-30 w-full">
             <nav className="flex items-center justify-between bg-white text-black p-2">
                 <button
                     type="button"

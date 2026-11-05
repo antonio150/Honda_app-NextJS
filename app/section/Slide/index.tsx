@@ -374,7 +374,7 @@ export default function Slide() {
             </div>
           )}
           {activeSlide.contenue_text && (
-            <p className=" text-sm leading-relaxed text-white/85">
+            <p className=" text-[12px] leading-relaxed text-white/85">
               {activeSlide.contenue_text}
             </p>
           )}
