@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Breakpoint = "mobile" | "tablet" | "desktop";
 
@@ -70,7 +71,7 @@ const media: SlideData[] = [
               src: "media/Honda-Homepage/Images/Article-Hero/Rugged-campaign/Thumb/2027-honda-passport-trailsport-elite-smoke-blue-pearl-m.jpg"
             },
             {
-              titre: "2027-honda-passport-trailsport-elite-smoke-blue-pearl-s",
+              titre: "honda-accord-packshot-front-corporate-lot-s",
               src: "media/Honda-Homepage/Images/Article-Hero/Rugged-campaign/Thumb/2027-honda-passport-trailsport-elite-smoke-blue-pearl-s.jpg"
             }
           ]
@@ -171,38 +172,6 @@ const media: SlideData[] = [
             },
             {
               titre:
-                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-m",
-              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-m.webp"
-            },
-            {
-              titre:
-                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-s",
-              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-s.webp"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: "MY26_Odyssey",
-      type: "image",
-      titre:
-        "Fun-to-drive hybrids from one of America’s most fuel-efficient full-line automakers.*",
-      sous_titre: "",
-      button: ["EXPLORE NOW"],
-      contenue_text: "",
-
-      value: [
-        {
-          type: "image",
-          value: [
-            {
-              titre:
-                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-l",
-              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-l.webp"
-            },
-            {
-              titre:
                 "2026-honda-ridgeline-trailsport-ash-green-metallic-front-dirt-road-m",
               src: "media/Honda-Homepage/Images/Article-Hero/MY26-Ridgeline/2026-honda-ridgeline-trailsport-ash-green-metallic-front-dirt-road-m.webp"
             },
@@ -216,11 +185,42 @@ const media: SlideData[] = [
       ]
     },
     {
+      name: "MY26_Odyssey",
+      type: "image",
+      titre:
+        "2026 Odyssey",
+      sous_titre: "Versatile design for family adventures.",
+      button: ["EXPLORE", "BUILD"],
+      contenue_text: "",
+
+      value: [
+        {
+          type: "image",
+          value: [
+            {
+              titre:
+                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-l",
+              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-l.webp"
+            },
+            {
+              titre:
+                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-m",
+              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-m.webp"
+            },
+            {
+              titre:
+                "2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-s",
+              src: "media/Honda-Homepage/Images/Article-Hero/MY26-Odyssey/2026-honda-odyssey-elite-sonic-gray-pearl-profile-lake-kayak-s.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
       name: "Hibryd",
       type: "video",
-      titre:
-        "Fun-to-drive hybrids from one of America's most fuel-efficient full-line automakers.*",
-      sous_titre: "",
+      titre:"",       
+      sous_titre:  "Fun-to-drive hybrids from one of America's most fuel-efficient full-line automakers.*",
       button: ["EXPLORE NOW"],
       contenue_text: "",
 
@@ -349,14 +349,14 @@ export default function Slide() {
         </picture>
       ) : null}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent md:from-black/70 md:via-black/20" />
-      <div className="absolute inset-0 flex items-center px-16 py-16 sm:px-20 md:px-24 lg:px-32">
-        <div className="flex max-w-2xl flex-col items-start gap-5">
-          <h2 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+      <div className="absolute  inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent md:from-black/70 md:via-black/20" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center  px-16 pt-29 ">
+        <div className="flex max-w-5xl flex-col items-center gap-5">
+          <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-4xl">
             {activeSlide.titre}
           </h2>
           {activeSlide.sous_titre && (
-            <p className="text-lg font-medium sm:text-xl">
+            <p className="text-xl font-medium sm:text-3xl">
               {activeSlide.sous_titre}
             </p>
           )}
@@ -366,7 +366,7 @@ export default function Slide() {
                 <button
                   key={label}
                   type="button"
-                  className="rounded-full border border-white px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors hover:bg-white hover:text-black"
+                  className="rounded-full border border-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors bg-red-600 hover:bg-white hover:text-black"
                 >
                   {label}
                 </button>
@@ -374,7 +374,7 @@ export default function Slide() {
             </div>
           )}
           {activeSlide.contenue_text && (
-            <p className="max-w-xl text-sm leading-relaxed text-white/85">
+            <p className=" text-sm leading-relaxed text-white/85">
               {activeSlide.contenue_text}
             </p>
           )}
@@ -385,17 +385,17 @@ export default function Slide() {
         type="button"
         aria-label="Diapositive précédente"
         onClick={() => changeSlide(-1)}
-        className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-3xl transition-colors hover:bg-black/65 sm:left-6"
+        className="absolute left-0 top-1/2 z-10 flex h-11 w-10 -translate-y-1/2 items-center justify-center  bg-black/35 text-3xl transition-colors hover:bg-black/65 "
       >
-        {"<"}
+        <ChevronLeft size={35} strokeWidth={2.5} />
       </button>
       <button
         type="button"
         aria-label="Diapositive suivante"
         onClick={() => changeSlide(1)}
-        className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/35 text-3xl transition-colors hover:bg-black/65 sm:right-6"
+        className="absolute right-0 top-1/2 z-10 flex h-11 w-10 -translate-y-1/2 items-center justify-center  bg-black/35 text-3xl transition-colors hover:bg-black/65 "
       >
-        {">"}
+        <ChevronRight size={35} strokeWidth={2.5} />
       </button>
 
       <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
