@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const headerItems = [
-  { src: "/img/header/HondaAutosLogo.svg", label: "Honda Autos" },
+  { src: "/img/header/HondaAutosLogo.svg", label: "Honda Autosdfdf" },
   { src: "/img/header/AcuraLogo.svg", label: "Acura Autos" },
   { src: "/img/header/PowersportsLogo.svg", label: "Powersports" },
   { src: "/img/header/PowerEquipmentLogo.svg", label: "Power Equipement" },

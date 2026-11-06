@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import Slide from "./section/Slide";
+import ListCar from "./section/ListCar";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header/>
       <Navbar/>
       <Slide/>
+      <ListCar/>
     </main>
   );
 }
