@@ -2,7 +2,7 @@
 
 export default function ListCar() {
   return (
-    <div>sdsds
+    <div>
       <div className="product-grid">
         <div className="logo">
           <span
