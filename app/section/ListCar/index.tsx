@@ -1,26 +1,59 @@
 import Image from "next/image";
 
-const brandTones: Record<string, { background: string; arrowToRight: string; arrowToLeft: string }> = {
+type BrandTone = "blue" | "red" | "black" | "grey";
+
+const brandTones: Record<BrandTone, { background: string; textColor: string; arrowToRight: string; arrowToLeft: string; arrowDown: string }> = {
   blue: {
     background: "bg-[#007CC2]",
+    textColor: "text-white",
     arrowToRight: "after:border-l-[#007CC2]",
     arrowToLeft: "after:border-r-[#007CC2]",
+    arrowDown: "after:border-t-[#007CC2]",
   },
   red: {
     background: "bg-[#C8102E]",
+    textColor: "text-white",
     arrowToRight: "after:border-l-[#C8102E]",
     arrowToLeft: "after:border-r-[#C8102E]",
+    arrowDown: "after:border-t-[#C8102E]",
   },
   black: {
     background: "bg-[#111111]",
+    textColor: "text-white",
     arrowToRight: "after:border-l-[#111111]",
     arrowToLeft: "after:border-r-[#111111]",
+    arrowDown: "after:border-t-[#111111]",
+  },
+  grey: {
+    background: "bg-[#F2F2F2]",
+    textColor: "text-[#111111]",
+    arrowToRight: "after:border-l-[#F2F2F2]",
+    arrowToLeft: "after:border-r-[#F2F2F2]",
+    arrowDown: "after:border-t-[#F2F2F2]",
   },
 };
 
+const desktopPlacements = [
+  "md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1",
+  "md:col-span-2 md:col-start-5 md:row-start-1",
+  "md:row-span-2 md:col-start-3 md:row-start-1",
+  "md:row-span-2 md:col-start-4 md:row-start-1",
+  "md:col-span-2 md:col-start-5 md:row-start-2",
+  "md:col-span-2 md:col-start-1 md:row-start-3",
+  "md:col-span-2 md:col-start-3 md:row-start-3",
+  "md:col-span-2 md:col-start-5 md:row-start-3",
+];
+
 export default function ListCar() {
 
-  const products = [
+  const products: Array<{
+    text: string;
+    src_logo: string;
+    label_logo: string;
+    src_image: string;
+    label_image: string;
+    tone: BrandTone;
+  }> = [
     {
       text:"Honda Autos",
       src_logo: "media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif",
@@ -51,7 +84,7 @@ export default function ListCar() {
       label_logo: "Logo_Honda_Corporate_Red",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-mower-desktop-v1.jpg",
       label_image: "homepage-brand-mower-desktop-v1",
-      tone: "red",
+      tone: "grey",
     },
     {
       text:"General Purpose Engines",
@@ -90,22 +123,24 @@ export default function ListCar() {
   return (
     <section
       aria-label="Honda products"
-      className="grid grid-cols-1 gap-3 px-4 py-5 md:grid-flow-dense md:auto-rows-[190px] md:grid-cols-4 md:gap-[14px] md:px-[5vw] md:py-9"
+      className="grid grid-cols-1 gap-0 md:auto-rows-[16.6667vw] md:grid-cols-6 md:gap-0"
     >
       {products.map((product, index) => {
         const isFeature = index === 0;
-        const isWide = index === 1 || index === 5;
-        const isTall = index === 2;
+        const isVertical = index === 2 || index === 3;
         const isReverse = index % 2 === 1;
         const brandTone = brandTones[product.tone];
+        const arrowDirection = isVertical
+          ? `md:after:left-1/2 md:after:right-auto md:after:top-auto md:after:bottom-[-15px] md:after:-translate-x-1/2 md:after:translate-y-0 md:after:border-t-[15px] md:after:border-r-[15px] md:after:border-b-0 md:after:border-l-[15px] md:after:border-r-transparent md:after:border-l-transparent ${brandTone.arrowDown}`
+          : "";
 
         return (
           <article
             key={product.label_image}
-            className={`flex min-h-[190px] overflow-hidden bg-[#f2f2f2] md:min-h-0 ${isReverse ? "flex-row-reverse" : ""} ${isFeature ? "md:col-span-2 md:row-span-2" : ""} ${isWide ? "md:col-span-2" : ""} ${isTall ? "md:row-span-2" : ""}`}
+            className={`relative flex aspect-[2/1] overflow-hidden bg-[#f2f2f2] md:aspect-auto ${isReverse ? "flex-row-reverse" : "flex-row"} ${isVertical ? "md:flex-col" : "md:flex-row"} ${desktopPlacements[index]}`}
           >
             <div
-              className={`relative z-[1] flex min-w-0 flex-[0_0_42%] flex-col items-start justify-center gap-3 p-4 text-white md:flex-[0_0_38%] md:gap-[14px] md:p-[18px] after:absolute after:top-1/2 after:z-[2] after:h-0 after:w-0 after:-translate-y-1/2 after:border-solid after:border-t-[15px] after:border-b-[15px] after:border-t-transparent after:border-b-transparent after:content-[''] ${brandTone.background} ${isFeature ? "md:flex-[0_0_34%]" : ""} ${isReverse ? `after:left-[-15px] after:border-r-[15px] after:border-l-0 ${brandTone.arrowToLeft}` : `after:right-[-15px] after:border-l-[15px] ${brandTone.arrowToRight}`}`}
+              className={`relative z-[1] flex min-w-0 flex-[0_0_50%] flex-col items-start justify-center gap-3 p-4 after:absolute after:top-1/2 after:z-[2] after:h-0 after:w-0 after:-translate-y-1/2 after:border-solid after:border-t-[15px] after:border-b-[15px] after:border-t-transparent after:border-b-transparent after:content-[''] md:flex-[0_0_50%] md:gap-[14px] md:p-[18px] ${brandTone.background} ${brandTone.textColor} ${isFeature ? "md:absolute md:left-0 md:top-0 md:h-1/2 md:w-1/2" : ""} ${isReverse ? `after:left-[-15px] after:border-r-[15px] after:border-l-0 ${brandTone.arrowToLeft}` : `after:right-[-15px] after:border-l-[15px] ${brandTone.arrowToRight}`} ${arrowDirection}`}
             >
               <div className="relative h-11 w-full max-w-[170px]">
                 <Image
@@ -123,13 +158,13 @@ export default function ListCar() {
                 GO
               </span>
             </div>
-            <div className="relative min-w-0 flex-1">
+            <div className={`relative min-w-0 flex-1 bg-[#111111] ${isFeature ? "md:absolute md:inset-0" : ""}`}>
               <Image
                 src={`/${product.src_image}`}
                 alt={product.text}
                 fill
                 sizes="(max-width: 759px) 60vw, (max-width: 1200px) 45vw, 35vw"
-                className="object-cover"
+                className="object-cover md:object-contain"
               />
             </div>
           </article>
