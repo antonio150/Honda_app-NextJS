@@ -26,7 +26,7 @@ With Docker Compose v2.22.0 or newer, start the development server with Compose 
 docker compose up --watch
 ```
 
-Then open [http://localhost:3000](http://localhost:3000). Stop the server with `Ctrl+C`.
+Then open [http://localhost:3003](http://localhost:3003). Stop the server with `Ctrl+C`.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

@@ -33,15 +33,15 @@ const brandTones: Record<BrandTone, { background: string; textColor: string; arr
   },
 };
 
-const desktopPlacements = [
-  "md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-1",
-  "md:col-span-2 md:col-start-5 md:row-start-1",
-  "md:row-span-2 md:col-start-3 md:row-start-1",
-  "md:row-span-2 md:col-start-4 md:row-start-1",
-  "md:col-span-2 md:col-start-5 md:row-start-2",
-  "md:col-span-2 md:col-start-1 md:row-start-3",
-  "md:col-span-2 md:col-start-3 md:row-start-3",
-  "md:col-span-2 md:col-start-5 md:row-start-3",
+const tileLayouts = [
+  { grid: "sm:col-span-9 md:col-span-6 lg:col-span-6", flow: "flex-row", brand: "basis-1/3", image: "", vertical: "" },
+  { grid: "sm:col-span-3 md:col-span-6 lg:col-span-6", flow: "flex-row-reverse sm:flex-col md:flex-row-reverse", brand: "basis-1/3 sm:w-full sm:basis-auto md:w-auto md:basis-1/3", image: "sm:w-full sm:flex-none sm:aspect-[2/1] md:w-auto md:flex-1 md:aspect-auto", vertical: "sm" },
+  { grid: "sm:col-span-9 md:col-span-6 lg:col-span-6", flow: "flex-row", brand: "basis-1/3", image: "", vertical: "" },
+  { grid: "sm:col-span-6 md:col-span-6 lg:col-span-6", flow: "flex-row-reverse", brand: "basis-1/3 sm:basis-1/2 md:basis-1/2 lg:basis-1/3", image: "", vertical: "" },
+  { grid: "sm:col-span-6 md:col-span-6 lg:col-span-6", flow: "flex-row", brand: "basis-1/3 sm:basis-1/2 md:basis-1/2 lg:basis-1/3", image: "", vertical: "" },
+  { grid: "sm:col-span-6 md:col-span-4 lg:col-span-4", flow: "flex-row-reverse", brand: "basis-1/3 sm:basis-1/2", image: "", vertical: "" },
+  { grid: "sm:col-span-3 md:col-span-2 lg:col-span-2", flow: "flex-row sm:flex-col", brand: "basis-1/3 sm:w-full sm:basis-auto", image: "sm:w-full sm:flex-none sm:aspect-[2/1]", vertical: "sm" },
+  { grid: "sm:col-span-6 md:col-span-4 lg:col-span-4", flow: "flex-row-reverse lg:flex-col", brand: "basis-1/3 sm:basis-1/2 md:basis-1/2 lg:w-full lg:basis-auto", image: "lg:w-full lg:flex-none lg:aspect-[2/1]", vertical: "lg" },
 ];
 
 export default function ListCar() {
@@ -68,7 +68,7 @@ export default function ListCar() {
       label_logo: "Logo_Honda_Powersports",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/homepage-brand-powersports-desktop.webp",
       label_image: "homepage-brand-powersports-desktop",
-      tone: "red",
+      tone: "black",
     },
     {
       text:"Acura Autos",
@@ -76,7 +76,7 @@ export default function ListCar() {
       label_logo: "Logo_Acura_Logo",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/Honda_Homepage_Menu_Position-03_Acura-Autos_1600x796px.webp",
       label_image: "Honda_Homepage_Menu_Position-03_Acura-Autos_1600x796px",
-      tone: "black",
+      tone: "red",
     },
     {
       text:"Generators, Mowers & Power Equipment",
@@ -92,7 +92,7 @@ export default function ListCar() {
       label_logo: "Logo_Honda_Corporate_White",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-engine-desktop.jpg",
       label_image: "homepage-brand-engine-desktop",
-      tone: "black",
+      tone: "red",
     },
     {
       text:"Outboard Motors",
@@ -100,7 +100,7 @@ export default function ListCar() {
       label_logo: "Logo_Honda_Marine",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-marine-desktop.avif",
       label_image: "homepage-brand-marine-desktop",
-      tone: "blue",
+      tone: "grey",
     },
     {
       text:"Honda Aircraft Company",
@@ -116,31 +116,32 @@ export default function ListCar() {
       label_logo: "Logo_Honda_Racing_v3",
       src_image: "media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/2026-honda-aramco-formula-1-aston-martin-car-profile-view-lr.webp",
       label_image: "2026-honda-aramco-formula-1-aston-martin-car-profile-view-lr",
-      tone: "black",
+      tone: "red",
     },
   ];
 
   return (
     <section
       aria-label="Honda products"
-      className="grid grid-cols-1 gap-0 md:auto-rows-[16.6667vw] md:grid-cols-6 md:gap-0"
+      className="grid grid-cols-12 gap-0"
     >
       {products.map((product, index) => {
-        const isFeature = index === 0;
-        const isVertical = index === 2 || index === 3;
+        const layout = tileLayouts[index];
         const isReverse = index % 2 === 1;
         const brandTone = brandTones[product.tone];
-        const arrowDirection = isVertical
-          ? `md:after:left-1/2 md:after:right-auto md:after:top-auto md:after:bottom-[-15px] md:after:-translate-x-1/2 md:after:translate-y-0 md:after:border-t-[15px] md:after:border-r-[15px] md:after:border-b-0 md:after:border-l-[15px] md:after:border-r-transparent md:after:border-l-transparent ${brandTone.arrowDown}`
-          : "";
+        const arrowDirection = layout.vertical === "sm"
+          ? `sm:after:left-1/2 sm:after:right-auto sm:after:top-auto sm:after:bottom-[-15px] sm:after:-translate-x-1/2 sm:after:translate-y-0 sm:after:border-t-[15px] sm:after:border-r-[15px] sm:after:border-b-0 sm:after:border-l-[15px] sm:after:border-r-transparent sm:after:border-l-transparent ${brandTone.arrowDown} ${isReverse ? `md:after:left-[-15px] md:after:right-auto md:after:top-1/2 md:after:bottom-auto md:after:translate-x-0 md:after:-translate-y-1/2 md:after:border-r-[15px] md:after:border-l-0 md:after:border-t-transparent md:after:border-b-transparent ${brandTone.arrowToLeft}` : `md:after:right-[-15px] md:after:left-auto md:after:top-1/2 md:after:bottom-auto md:after:translate-x-0 md:after:-translate-y-1/2 md:after:border-l-[15px] md:after:border-r-0 md:after:border-t-transparent md:after:border-b-transparent ${brandTone.arrowToRight}`}`
+          : layout.vertical === "lg"
+            ? `lg:after:left-1/2 lg:after:right-auto lg:after:top-auto lg:after:bottom-[-15px] lg:after:-translate-x-1/2 lg:after:translate-y-0 lg:after:border-t-[15px] lg:after:border-r-[15px] lg:after:border-b-0 lg:after:border-l-[15px] lg:after:border-r-transparent lg:after:border-l-transparent ${brandTone.arrowDown}`
+            : "";
 
         return (
           <article
             key={product.label_image}
-            className={`relative flex aspect-[2/1] overflow-hidden bg-[#f2f2f2] md:aspect-auto ${isReverse ? "flex-row-reverse" : "flex-row"} ${isVertical ? "md:flex-col" : "md:flex-row"} ${desktopPlacements[index]}`}
+            className={`relative col-span-12 flex min-w-0 overflow-hidden bg-[#f2f2f2] ${layout.grid} ${layout.flow}`}
           >
             <div
-              className={`relative z-[1] flex min-w-0 flex-[0_0_50%] flex-col items-start justify-center gap-3 p-4 after:absolute after:top-1/2 after:z-[2] after:h-0 after:w-0 after:-translate-y-1/2 after:border-solid after:border-t-[15px] after:border-b-[15px] after:border-t-transparent after:border-b-transparent after:content-[''] md:flex-[0_0_50%] md:gap-[14px] md:p-[18px] ${brandTone.background} ${brandTone.textColor} ${isFeature ? "md:absolute md:left-0 md:top-0 md:h-1/2 md:w-1/2" : ""} ${isReverse ? `after:left-[-15px] after:border-r-[15px] after:border-l-0 ${brandTone.arrowToLeft}` : `after:right-[-15px] after:border-l-[15px] ${brandTone.arrowToRight}`} ${arrowDirection}`}
+              className={`relative z-[1] flex aspect-square min-w-0 shrink-0 self-start flex-col items-start justify-center gap-3 p-4 after:absolute after:top-1/2 after:z-[2] after:h-0 after:w-0 after:-translate-y-1/2 after:border-solid after:border-t-[15px] after:border-b-[15px] after:border-t-transparent after:border-b-transparent after:content-[''] md:gap-[14px] md:p-[18px] ${layout.brand} ${brandTone.background} ${brandTone.textColor} ${isReverse ? `after:left-[-15px] after:border-r-[15px] after:border-l-0 ${brandTone.arrowToLeft}` : `after:right-[-15px] after:border-l-[15px] ${brandTone.arrowToRight}`} ${arrowDirection}`}
             >
               <div className="relative h-11 w-full max-w-[170px]">
                 <Image
@@ -158,13 +159,13 @@ export default function ListCar() {
                 GO
               </span>
             </div>
-            <div className={`relative min-w-0 flex-1 bg-[#111111] ${isFeature ? "md:absolute md:inset-0" : ""}`}>
+            <div className={`relative min-w-0 flex-1 bg-[#111111] ${layout.image}`}>
               <Image
                 src={`/${product.src_image}`}
                 alt={product.text}
                 fill
                 sizes="(max-width: 759px) 60vw, (max-width: 1200px) 45vw, 35vw"
-                className="object-cover md:object-contain"
+                className="object-cover"
               />
             </div>
           </article>
