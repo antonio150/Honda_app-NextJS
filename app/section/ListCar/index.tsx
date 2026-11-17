@@ -51,56 +51,56 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif",
       label_logo: "Logo_Honda_Autos",
-      tone: "blue"
+     
     },
     {
       text: "Motorcycles, ATVs, Scooters, SxS",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif",
       label_logo: "Logo_Honda_Powersports",
-      tone: "black"
+      
     },
     {
       text: "Acura Autos",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Acura_Logo.avif",
       label_logo: "Logo_Acura_Logo",
-      tone: "red"
+     
     },
     {
       text: "Generators, Mowers & Power Equipment",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_Red.avif",
       label_logo: "Logo_Honda_Corporate_Red",
-      tone: "grey"
+      
     },
     {
       text: "General Purpose Engines",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_White.webp",
       label_logo: "Logo_Honda_Corporate_White",
-      tone: "red"
+     
     },
     {
       text: "Outboard Motors",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Marine.avif",
       label_logo: "Logo_Honda_Marine",
-      tone: "grey"
+    
     },
     {
       text: "Honda Aircraft Company",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Jet.avif",
       label_logo: "Logo_Honda_Jet",
-      tone: "red"
+    
     },
     {
       text: "HPD is now HRC US",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Racing_v3.svg",
       label_logo: "Logo_Honda_Racing_v3",
-      tone: "red"
+
     }
   ];
 
