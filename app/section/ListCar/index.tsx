@@ -112,12 +112,12 @@ export default function ListCar() {
           <div className="flex w-1/2 min-w-0">
             <div className="flex flex-col">
               <div
-                className="relative  flex flex-col bg-red-500 items-center justify-center w-60 h-60 shrink-0
+                className="relative  flex flex-col bg-blue-500 items-center justify-center w-58 h-58 shrink-0
               after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
-                after:bg-red-500
-                after:border-red-500
+                after:bg-blue-500
+                after:border-blue-500
                 after:rotate-45 after:-translate-y-1/2
                 "
               >
@@ -131,7 +131,7 @@ export default function ListCar() {
                 <span className="text-xl">Honda Autos</span>
                 <span className="text-xl">GO</span>
               </div>
-              <div className="flex flex-col bg-white text-black items-center w-60 h-60 shrink-0
+              <div className="flex flex-col bg-white text-black items-center w-58 h-58 shrink-0
                 relative
                 after:content-[''] after:absolute 
                 after:-bottom-3 after:left-1/2
@@ -158,16 +158,16 @@ export default function ListCar() {
             <Image
               src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS.webp"
               alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-              width={435}
-              height={420}
-              className=" object-cover"
+              width={436}
+              height={400}
+              className=" h-[466px] object-cover"
             />
           </div>
           {/* section 1  */}
           <div className="flex flex-col">
             {/* section 2 */}
             <div className="flex  min-w-0">
-              <div className=" flex flex-col bg-red-500 items-center w-60 h-60 shrink-0
+              <div className=" flex flex-col bg-red-500 items-center w-58 h-58 shrink-0
                 relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
@@ -194,8 +194,8 @@ export default function ListCar() {
                   src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/homepage-brand-powersports-desktop.webp"
                   alt="Honda Powersports"
                   width={320}
-                  height={100}
-                  className="w-[450px] h-[240px] max-w-none object-cover"
+                  height={90}
+                  className="w-[450px] h-[233px] max-w-none object-cover"
                 />
               </div>
             </div>
@@ -209,10 +209,10 @@ export default function ListCar() {
                   alt="Honda_Homepage_Menu_Position-03_Acura-Autos_1600x796px"
                   width={320}
                   height={100}
-                  className="w-[450px] h-[240px] max-w-none object-cover"
+                  className="w-[450px] h-[233px] max-w-none object-cover"
                 />
               </div>
-              <div className="flex flex-col bg-black-500 items-center w-60 h-60 shrink-0
+              <div className="flex flex-col bg-black-500 items-center w-58 h-58 shrink-0
               relative
                 after:content-[''] after:absolute 
                 after:top-1/2 after:-left-3
@@ -241,9 +241,9 @@ export default function ListCar() {
             alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
             width={400}
             height={400}
-            className=" w-[350px] h-[240px] object-cover"
+            className="w-58 h-58 object-cover"
           />
-          <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0 
+          <div className="flex flex-col bg-red-500 items-center w-58 h-58 shrink-0 
           relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
@@ -269,7 +269,7 @@ export default function ListCar() {
               alt="Honda Powersports"
               width={320}
               height={100}
-              className="w-[450px] h-[240px] max-w-none object-cover"
+              className="w-[450px] h-[232px] max-w-none object-cover"
             />
           </div>
           <div className="w-1/2 min-w-0 overflow-hidden">
@@ -278,12 +278,12 @@ export default function ListCar() {
               alt="Honda Powersports"
               width={320}
               height={100}
-              className="w-[450px] h-[240px] max-w-none object-cover"
+              className="w-[450px] h-[232px] max-w-none object-cover"
             />
           </div>
         </div>
         <div className="flex w-full">
-          <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0
+          <div className="flex flex-col bg-red-500 items-center w-58 h-58 shrink-0
           relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
@@ -307,7 +307,7 @@ export default function ListCar() {
             alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
             width={400}
             height={400}
-            className=" w-[350px] h-[240px] object-cover"
+            className=" w-[350px] h-[232px] object-cover"
           />
 
           <Image
@@ -315,10 +315,10 @@ export default function ListCar() {
             alt="Honda Powersports"
             width={300}
             height={100}
-            className="w-[435px] h-[240px] max-w-none object-cover"
+            className="w-[444px] h-[232px] max-w-none object-cover"
           />
           <div className="flex w-full">
-            <div className="flex flex-col bg-white text-black items-center w-1/2 h-60 shrink-0
+            <div className="flex flex-col bg-white text-black items-center w-1/2 h-58 shrink-0
             relative
                 after:content-[''] after:absolute 
                 after:top-1/2 after:-left-3
@@ -338,7 +338,7 @@ export default function ListCar() {
               <span className="text-xl">Outboard Motors</span>
               <span className="text-xl">GO</span>
             </div>
-            <div className="flex flex-col bg-red-500 items-center w-1/2 h-60 shrink-0
+            <div className="flex flex-col bg-red-500 items-center w-1/2 h-58 shrink-0
             relative
                 after:content-[''] after:absolute 
                 after:-top-3 after:left-1/2
