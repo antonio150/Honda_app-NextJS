@@ -51,62 +51,115 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif",
       label_logo: "Logo_Honda_Autos",
-     
+      backgroundColor: "#3b82f6",
+      textColor: "#ffffff",
     },
     {
       text: "Motorcycles, ATVs, Scooters, SxS",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif",
       label_logo: "Logo_Honda_Powersports",
-      
+      backgroundColor: "#ef4444",
+      textColor: "#ffffff",
     },
     {
       text: "Acura Autos",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Acura_Logo.avif",
       label_logo: "Logo_Acura_Logo",
-     
+      backgroundColor: "#000000",
+      textColor: "#ffffff",
     },
     {
       text: "Generators, Mowers & Power Equipment",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_Red.avif",
       label_logo: "Logo_Honda_Corporate_Red",
-      
+      backgroundColor: "#ffffff",
+      textColor: "#000000",
     },
     {
       text: "General Purpose Engines",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_White.webp",
       label_logo: "Logo_Honda_Corporate_White",
-     
+      backgroundColor: "#ef4444",
+      textColor: "#ffffff",
     },
     {
       text: "Outboard Motors",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Marine.avif",
       label_logo: "Logo_Honda_Marine",
-    
+      backgroundColor: "#ffffff",
+      textColor: "#000000",
     },
     {
       text: "Honda Aircraft Company",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Jet.avif",
       label_logo: "Logo_Honda_Jet",
-    
+      backgroundColor: "#ef4444",
+      textColor: "#ffffff",
     },
     {
       text: "HPD is now HRC US",
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Racing_v3.svg",
       label_logo: "Logo_Honda_Racing_v3",
+      backgroundColor: "#ef4444",
+      textColor: "#ffffff",
 
     }
   ];
 
   return (
-    <section>
-      <div className=" ">
+    <section className="list-car-viewport">
+      <div className="list-car-mobile">
+        {logos.map((logo, index) => {
+          const product = products[index];
+
+          if (!product) {
+            return null;
+          }
+
+          return (
+            <div
+              className={`list-car-mobile-row ${index % 2 === 1 ? "is-reversed" : ""}`}
+              key={logo.label_logo}
+            >
+              <div
+                className="list-car-mobile-logo"
+                style={{
+                  backgroundColor: logo.backgroundColor,
+                  color: logo.textColor,
+                }}
+              >
+                <Image
+                  src={logo.src_logo}
+                  alt={logo.label_logo}
+                  width={180}
+                  height={64}
+                  sizes="40vw"
+                  className="list-car-mobile-logo-image"
+                />
+                <span>{logo.text}</span>
+                <span>GO</span>
+              </div>
+              <div className="list-car-mobile-image">
+                <Image
+                  src={product.src_image}
+                  alt={product.label_image}
+                  fill
+                  sizes="50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="list-car-canvas">
         <div className="flex w-full">
           {/* section 1  */}
           <div className="flex w-1/2 min-w-0">
@@ -158,7 +211,7 @@ export default function ListCar() {
             <Image
               src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS.webp"
               alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-              width={436}
+              width={490}
               height={400}
               className=" h-[466px] object-cover"
             />

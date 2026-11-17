@@ -54,3 +54,60 @@ body {
 .scrollbar-custom::-webkit-scrollbar-button {
   background-color: black;
 }
+
+@media (min-width: 768px) {
+  .list-car-viewport {
+    overflow: hidden;
+  }
+
+  .list-car-mobile {
+    display: none;
+  }
+
+  .list-car-canvas {
+    width: 100%;
+    min-width: 1440px;
+    zoom: clamp(0.5, calc(100vw / 1440px), 1);
+  }
+}
+
+@media (max-width: 767px) {
+  .list-car-canvas {
+    display: none;
+  }
+
+  .list-car-mobile-row {
+    display: flex;
+    min-height: clamp(145px, 46vw, 220px);
+  }
+
+  .list-car-mobile-row.is-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .list-car-mobile-logo {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: clamp(0.7rem, 3.2vw, 1rem);
+    line-height: 1.2;
+  }
+
+  .list-car-mobile-logo-image {
+    width: min(100%, 180px);
+    max-height: 54px;
+    object-fit: contain;
+  }
+
+  .list-car-mobile-image {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+  }
+}
