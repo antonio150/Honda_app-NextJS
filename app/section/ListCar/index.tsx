@@ -110,16 +110,49 @@ export default function ListCar() {
         <div className="flex w-full">
           {/* section 1  */}
           <div className="flex w-1/2 min-w-0">
-            <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0">
-              <Image
-                src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif"
-                alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-                width={154}
-                height={54}
-                className=" object-cover"
-              />
-              <span className="text-xl">Honda Autos</span>
-              <span className="text-xl">GO</span>
+            <div className="flex flex-col">
+              <div
+                className="relative  flex flex-col bg-red-500 items-center justify-center w-60 h-60 shrink-0
+              after:content-[''] after:absolute after:top-1/2 after:-right-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-red-500
+                after:border-red-500
+                after:rotate-45 after:-translate-y-1/2
+                "
+              >
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif"
+                  alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
+                  width={154}
+                  height={54}
+                  className=" object-cover"
+                />
+                <span className="text-xl">Honda Autos</span>
+                <span className="text-xl">GO</span>
+              </div>
+              <div className="flex flex-col bg-white text-black items-center w-60 h-60 shrink-0
+                relative
+                after:content-[''] after:absolute 
+                after:-bottom-3 after:left-1/2
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-white
+                after:border-white
+                after:rotate-45 after:-translate-x-1/2
+              ">
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_Red.avif"
+                  alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
+                  width={154}
+                  height={54}
+                  className=" object-cover"
+                />
+                <span className="text-xl">
+                  Generators, Mowers & Power Equipment
+                </span>
+                <span className="text-xl">GO</span>
+              </div>
             </div>
 
             <Image
@@ -131,33 +164,201 @@ export default function ListCar() {
             />
           </div>
           {/* section 1  */}
-          {/* section 2  */}
-          {/* section 2 */}
-<div className="flex w-1/2 min-w-0">
-  <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0">
-    <Image
-      src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif"
-      alt="Honda Powersports"
-      width={400}
-      height={400}
-      className="w-full h-auto object-cover"
-    />
-    <span className="text-xl">Motorcycles, ATVs, Scooters, SxS</span>
-    <span className="text-xl">GO</span>
-  </div>
+          <div className="flex flex-col">
+            {/* section 2 */}
+            <div className="flex  min-w-0">
+              <div className=" flex flex-col bg-red-500 items-center w-60 h-60 shrink-0
+                relative
+                after:content-[''] after:absolute after:top-1/2 after:-right-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-red-500
+                after:border-red-500
+                after:rotate-45 after:-translate-y-1/2">
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif"
+                  alt="Honda Powersports"
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+                <span className="text-xl">
+                  Motorcycles, ATVs, Scooters, SxS
+                </span>
+                <span className="text-xl">GO</span>
+              </div>
 
-  {/* Deuxième image */}
-  <div className="w-full min-w-0 overflow-hidden">
-    <Image
-      src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/homepage-brand-powersports-desktop.webp"
-      alt="Honda Powersports"
-      width={320}
-      height={100}
-      className="w-[450px] h-[240px] max-w-none object-cover"
-    />
-  </div>
-</div>
-          {/* section 2  */}
+              {/* Deuxième image */}
+              <div className="w-full min-w-0 overflow-hidden">
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/homepage-brand-powersports-desktop.webp"
+                  alt="Honda Powersports"
+                  width={320}
+                  height={100}
+                  className="w-[450px] h-[240px] max-w-none object-cover"
+                />
+              </div>
+            </div>
+
+            {/* section 2  */}
+            <div className="flex  min-w-0">
+              {/* Deuxième image */}
+              <div className="w-full min-w-0 overflow-hidden">
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/Honda_Homepage_Menu_Position-03_Acura-Autos_1600x796px.webp"
+                  alt="Honda_Homepage_Menu_Position-03_Acura-Autos_1600x796px"
+                  width={320}
+                  height={100}
+                  className="w-[450px] h-[240px] max-w-none object-cover"
+                />
+              </div>
+              <div className="flex flex-col bg-black-500 items-center w-60 h-60 shrink-0
+              relative
+                after:content-[''] after:absolute 
+                after:top-1/2 after:-left-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-black
+                after:border-black
+                after:rotate-45 after:-translate-y-1/2
+              ">
+                <Image
+                  src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Acura_Logo.avif"
+                  alt="Honda Powersports"
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+                <span className="text-xl">Acura Autos</span>
+                <span className="text-xl">GO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full">
+          <Image
+            src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-mower-desktop-v1.jpg"
+            alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
+            width={400}
+            height={400}
+            className=" w-[350px] h-[240px] object-cover"
+          />
+          <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0 
+          relative
+                after:content-[''] after:absolute after:top-1/2 after:-right-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-red-500
+                after:border-red-500
+                after:rotate-45 after:-translate-y-1/2
+          ">
+            <Image
+              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Jet.avif"
+              alt="Honda Powersports"
+              width={400}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+            <span className="text-xl">Honda Aircraft Company</span>
+            <span className="text-xl">GO</span>
+          </div>
+
+          <div className="w-1/2 min-w-0 overflow-hidden">
+            <Image
+              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-hondajet-desktop.avif"
+              alt="Honda Powersports"
+              width={320}
+              height={100}
+              className="w-[450px] h-[240px] max-w-none object-cover"
+            />
+          </div>
+          <div className="w-1/2 min-w-0 overflow-hidden">
+            <Image
+              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/2026-honda-aramco-formula-1-aston-martin-car-profile-view-lr.webp"
+              alt="Honda Powersports"
+              width={320}
+              height={100}
+              className="w-[450px] h-[240px] max-w-none object-cover"
+            />
+          </div>
+        </div>
+        <div className="flex w-full">
+          <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0
+          relative
+                after:content-[''] after:absolute after:top-1/2 after:-right-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-red-500
+                after:border-red-500
+                after:rotate-45 after:-translate-y-1/2
+          ">
+            <Image
+              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_White.webp"
+              alt="Honda Powersports"
+              width={400}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+            <span className="text-xl">General Purpose Engines</span>
+            <span className="text-xl">GO</span>
+          </div>
+          <Image
+            src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-engine-desktop.jpg"
+            alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
+            width={400}
+            height={400}
+            className=" w-[350px] h-[240px] object-cover"
+          />
+
+          <Image
+            src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-marine-desktop.avif"
+            alt="Honda Powersports"
+            width={300}
+            height={100}
+            className="w-[435px] h-[240px] max-w-none object-cover"
+          />
+          <div className="flex w-full">
+            <div className="flex flex-col bg-white text-black items-center w-1/2 h-60 shrink-0
+            relative
+                after:content-[''] after:absolute 
+                after:top-1/2 after:-left-3
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-white
+                after:border-white
+                after:rotate-45 after:-translate-y-1/2
+            ">
+              <Image
+                src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Marine.avif"
+                alt="Honda Powersports"
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+              <span className="text-xl">Outboard Motors</span>
+              <span className="text-xl">GO</span>
+            </div>
+            <div className="flex flex-col bg-red-500 items-center w-1/2 h-60 shrink-0
+            relative
+                after:content-[''] after:absolute 
+                after:-top-3 after:left-1/2
+                after:w-6 after:h-6
+                after:border-t-2 after:border-r-2
+                after:bg-red-500
+                after:border-red-500
+                after:rotate-45 after:-translate-x-1/2
+            ">
+              <Image
+                src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Racing_v3.svg"
+                alt="Honda Powersports"
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+              <span className="text-xl">HPD is now HRC US</span>
+              <span className="text-xl">GO</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
