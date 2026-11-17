@@ -69,6 +69,107 @@ body {
     min-width: 1440px;
     zoom: clamp(0.5, calc(100vw / 1440px), 1);
   }
+
+  .list-car-canvas > div {
+    width: 100%;
+    gap: 0;
+    margin: 0;
+  }
+
+  .list-car-canvas > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 466px;
+  }
+
+  .list-car-canvas > div:first-child > div:first-child {
+    display: flex;
+    width: auto;
+    min-width: 0;
+  }
+
+  .list-car-canvas > div:first-child > div:first-child > div:first-child {
+    flex: 0 0 232px;
+  }
+
+  .list-car-canvas > div:first-child > div:first-child > div:first-child > div {
+    width: 100%;
+    height: 50%;
+    min-height: 0;
+  }
+
+  .list-car-canvas > div:first-child > div:first-child > img {
+    flex: 1;
+    width: 0;
+    height: 100%;
+    min-width: 0;
+  }
+
+  .list-car-canvas > div:first-child > div:nth-child(2) {
+    display: flex;
+    width: auto;
+    min-width: 0;
+    flex-direction: column;
+  }
+
+  .list-car-canvas > div:first-child > div:nth-child(2) > div {
+    display: flex;
+    height: 50%;
+    min-width: 0;
+  }
+
+  .list-car-canvas > div:first-child > div:nth-child(2) > div > div.flex-col {
+    flex: 0 0 232px;
+    width: 232px;
+    height: 100%;
+  }
+
+  .list-car-canvas > div:first-child > div:nth-child(2) > div > div.overflow-hidden {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .list-car-canvas > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 232fr 232fr 488fr 488fr;
+    height: 232px;
+  }
+
+  .list-car-canvas > div:nth-child(2) > * {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
+
+  .list-car-canvas > div:nth-child(3) {
+    display: grid;
+    grid-template-columns: 232fr 350fr 444fr 414fr;
+    height: 232px;
+  }
+
+  .list-car-canvas > div:nth-child(3) > * {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
+
+  .list-car-canvas img {
+    display: block;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .list-car-canvas > div:nth-child(2) > img,
+  .list-car-canvas > div:nth-child(3) > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .list-car-canvas > div:nth-child(2) > div.overflow-hidden > img,
+  .list-car-canvas > div:first-child > div:nth-child(2) > div > div.overflow-hidden > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (max-width: 767px) {
