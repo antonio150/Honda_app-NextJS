@@ -106,49 +106,58 @@ export default function ListCar() {
 
   return (
     <section>
-      <div className="grid grid-cols-3 ">
-        <div className="relative">
-          <div className="grid grid-cols-2">
-          
-          <div className="flex flex-col bg-red-500 items-center w-60 h-60">
-            <Image
-              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif"
-              alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-              width={800}
-              height={400}
-              className="w-full h-auto object-cover"
-            />
-            <span className="text-xl">Honda Autos</span>
-            <span className="text-xl">GO</span>
-          </div>
+      <div className=" ">
+        <div className="flex w-full">
+          {/* section 1  */}
+          <div className="flex w-1/2 min-w-0">
+            <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0">
+              <Image
+                src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif"
+                alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
+                width={154}
+                height={54}
+                className=" object-cover"
+              />
+              <span className="text-xl">Honda Autos</span>
+              <span className="text-xl">GO</span>
+            </div>
 
-          <Image
-            src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS.webp"
-            alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-            width={800}
-            height={800}
-            className=" object-cover"
-          />
-            
-          </div>
-          <div className="flex flex-col bg-red-500 items-center w-60 h-60">
             <Image
-              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Autos.avif"
+              src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS.webp"
               alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-              width={800}
-              height={400}
-              className="w-full h-auto object-cover"
+              width={435}
+              height={420}
+              className=" object-cover"
             />
-            <span className="text-xl">Honda Autos</span>
-            <span className="text-xl">GO</span>
           </div>
-          <Image
-            src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS.webp"
-            alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-            width={800}
-            height={400}
-            className="w-full h-auto object-cover"
-          />
+          {/* section 1  */}
+          {/* section 2  */}
+          {/* section 2 */}
+<div className="flex w-1/2 min-w-0">
+  <div className="flex flex-col bg-red-500 items-center w-60 h-60 shrink-0">
+    <Image
+      src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif"
+      alt="Honda Powersports"
+      width={400}
+      height={400}
+      className="w-full h-auto object-cover"
+    />
+    <span className="text-xl">Motorcycles, ATVs, Scooters, SxS</span>
+    <span className="text-xl">GO</span>
+  </div>
+
+  {/* Deuxième image */}
+  <div className="w-full min-w-0 overflow-hidden">
+    <Image
+      src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/Honda-Product-offering/desktop/V2/homepage-brand-powersports-desktop.webp"
+      alt="Honda Powersports"
+      width={320}
+      height={100}
+      className="w-[450px] h-[240px] max-w-none object-cover"
+    />
+  </div>
+</div>
+          {/* section 2  */}
         </div>
       </div>
     </section>
