@@ -59,7 +59,7 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif",
       label_logo: "Logo_Honda_Powersports",
-      backgroundColor: "#ef4444",
+      backgroundColor: "#b60202",
       textColor: "#ffffff",
     },
     {
@@ -83,7 +83,7 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_White.webp",
       label_logo: "Logo_Honda_Corporate_White",
-      backgroundColor: "#ef4444",
+      backgroundColor: "#b60202",
       textColor: "#ffffff",
     },
     {
@@ -99,7 +99,7 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Jet.avif",
       label_logo: "Logo_Honda_Jet",
-      backgroundColor: "#ef4444",
+      backgroundColor: "#b60202",
       textColor: "#ffffff",
     },
     {
@@ -107,7 +107,7 @@ export default function ListCar() {
       src_logo:
         "/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Racing_v3.svg",
       label_logo: "Logo_Honda_Racing_v3",
-      backgroundColor: "#ef4444",
+      backgroundColor: "#b60202",
       textColor: "#ffffff",
 
     }
@@ -129,7 +129,7 @@ export default function ListCar() {
               key={logo.label_logo}
             >
               <div
-                className="list-car-mobile-logo"
+                className="list-car-mobile-logo gap-y-5 p-8"
                 style={{
                   backgroundColor: logo.backgroundColor,
                   color: logo.textColor,
@@ -138,13 +138,13 @@ export default function ListCar() {
                 <Image
                   src={logo.src_logo}
                   alt={logo.label_logo}
-                  width={180}
-                  height={64}
+                  width={154}
+                  height={54}
                   sizes="40vw"
                   className="list-car-mobile-logo-image"
                 />
-                <span>{logo.text}</span>
-                <span>GO</span>
+                <span className="text-md font-bold">{logo.text}</span>
+                <span className="text-xl underline underline-offset-5 font-bold">GO</span>
               </div>
               <div className="list-car-mobile-image">
                 <Image
@@ -165,13 +165,14 @@ export default function ListCar() {
           <div className="flex w-1/2 min-w-0">
             <div className="flex flex-col">
               <div
-                className="relative  flex flex-col bg-blue-500 items-center justify-center w-58 h-58 shrink-0
-              after:content-[''] after:absolute after:top-1/2 after:-right-3
+                className="relative  flex flex-col bg-blue-500 p-8 text-center items-center justify-center w-58 h-58 shrink-0
+                after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
                 after:bg-blue-500
                 after:border-blue-500
                 after:rotate-45 after:-translate-y-1/2
+                gap-y-5
                 "
               >
                 <Image
@@ -181,10 +182,10 @@ export default function ListCar() {
                   height={54}
                   className=" object-cover"
                 />
-                <span className="text-xl">Honda Autos</span>
-                <span className="text-xl">GO</span>
+                <span className="text-md font-bold">Honda Autos</span>
+                <span className="text-xl underline underline-offset-5 font-bold">GO</span>
               </div>
-              <div className="flex flex-col bg-white text-black items-center w-58 h-58 shrink-0
+              <div className="flex flex-col bg-white text-black text-center items-center justify-center p-8 w-58 h-50 shrink-0
                 relative
                 after:content-[''] after:absolute 
                 after:-bottom-3 after:left-1/2
@@ -193,6 +194,7 @@ export default function ListCar() {
                 after:bg-white
                 after:border-white
                 after:rotate-45 after:-translate-x-1/2
+                gap-y-5
               ">
                 <Image
                   src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_Red.avif"
@@ -201,10 +203,10 @@ export default function ListCar() {
                   height={54}
                   className=" object-cover"
                 />
-                <span className="text-xl">
+                <span className="text-md font-bold ">
                   Generators, Mowers & Power Equipment
                 </span>
-                <span className="text-xl">GO</span>
+                <span className="text-xl underline underline-offset-5 font-bold">GO</span>
               </div>
             </div>
 
@@ -220,25 +222,27 @@ export default function ListCar() {
           <div className="flex w-full flex-col">
             {/* section 2 */}
             <div className="flex ">
-              <div className=" flex flex-col bg-red-500 items-center w-58 h-58 shrink-0
+              <div className=" flex flex-col  bg-red-700 items-center text-center justify-center p-8 w-58 h-58 shrink-0
                 relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
-                after:bg-red-500
-                after:border-red-500
-                after:rotate-45 after:-translate-y-1/2">
+                after:bg-red-700
+                after:border-red-700
+                after:rotate-45 after:-translate-y-1/2
+                gap-y-5
+                ">
                 <Image
                   src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Powersports.avif"
                   alt="Honda Powersports"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-cover"
+                  width={154}
+                  height={54}
+                  className="object-cover"
                 />
-                <span className="text-xl">
+                <span className="text-md font-bold">
                   Motorcycles, ATVs, Scooters, SxS
                 </span>
-                <span className="text-xl">GO</span>
+                <span className="text-xl underline underline-offset-5 font-bold">GO</span>
               </div>
 
               {/* Deuxième image */}
@@ -265,7 +269,7 @@ export default function ListCar() {
                   className="w-[450px] h-[233px] max-w-none object-cover"
                 />
               </div>
-              <div className="flex flex-col bg-black-500 items-center w-58 h-58 shrink-0
+              <div className="flex flex-col bg-black-500 items-center text-center justify-center p-8 w-58 h-58 shrink-0
               relative
                 after:content-[''] after:absolute 
                 after:top-1/2 after:-left-3
@@ -274,16 +278,17 @@ export default function ListCar() {
                 after:bg-black
                 after:border-black
                 after:rotate-45 after:-translate-y-1/2
+                gap-y-5
               ">
                 <Image
                   src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Acura_Logo.avif"
                   alt="Honda Powersports"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-cover"
+                  width={154}
+                  height={54}
+                  className="object-cover"
                 />
-                <span className="text-xl">Acura Autos</span>
-                <span className="text-xl">GO</span>
+                <span className="text-md font-bold">Acura Autos</span>
+                <span className="text-xl underline underline-offset-5 font-bold">GO</span>
               </div>
             </div>
           </div>
@@ -296,24 +301,25 @@ export default function ListCar() {
             height={400}
             className="w-58 h-58 object-cover"
           />
-          <div className="flex flex-col bg-red-500 items-center w-58 h-58 shrink-0 
+          <div className="flex flex-col bg-red-700 items-center text-center justify-center p-6 w-58 h-58 shrink-0 
           relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
-                after:bg-red-500
-                after:border-red-500
+                after:bg-red-700
+                after:border-red-700
                 after:rotate-45 after:-translate-y-1/2
+                gap-y-5
           ">
             <Image
               src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Jet.avif"
               alt="Honda Powersports"
-              width={400}
-              height={400}
-              className="w-full h-auto object-cover"
+              width={154}
+              height={54}
+              className=" object-cover"
             />
-            <span className="text-xl">Honda Aircraft Company</span>
-            <span className="text-xl">GO</span>
+            <span className="text-md font-bold">Honda Aircraft Company</span>
+            <span className="text-xl underline underline-offset-5 font-bold">GO</span>
           </div>
 
           <div className="w-1/2 min-w-0 overflow-hidden">
@@ -336,24 +342,25 @@ export default function ListCar() {
           </div>
         </div>
         <div className="flex w-full">
-          <div className="flex flex-col bg-red-500 items-center w-58 h-58 shrink-0
-          relative
+          <div className="flex flex-col bg-red-700 items-center text-center justify-center p-8 w-58 h-58 shrink-0
+                relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
-                after:bg-red-500
-                after:border-red-500
+                after:bg-red-700
+                after:border-red-700
                 after:rotate-45 after:-translate-y-1/2
+                gap-y-5
           ">
             <Image
               src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Corporate_White.webp"
               alt="Honda Powersports"
-              width={400}
-              height={400}
-              className="w-full h-auto object-cover"
+              width={154}
+              height={54}
+              className="object-cover"
             />
-            <span className="text-xl">General Purpose Engines</span>
-            <span className="text-xl">GO</span>
+            <span className="text-md font-bold">General Purpose Engines</span>
+            <span className="text-xl underline underline-offset-5 font-bold">GO</span>
           </div>
           <Image
             src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-engine-desktop.jpg"
@@ -371,8 +378,8 @@ export default function ListCar() {
             className="w-[444px] h-[232px] max-w-none object-cover"
           />
           <div className="flex w-full">
-            <div className="flex flex-col bg-white text-black items-center w-1/2 h-58 shrink-0
-            relative
+            <div className="flex flex-col bg-white text-black items-center text-center justify-center p-8 w-1/2 h-58 shrink-0
+                relative
                 after:content-[''] after:absolute 
                 after:top-1/2 after:-left-3
                 after:w-6 after:h-6
@@ -380,36 +387,38 @@ export default function ListCar() {
                 after:bg-white
                 after:border-white
                 after:rotate-45 after:-translate-y-1/2
+                gap-y-5
             ">
               <Image
                 src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Marine.avif"
                 alt="Honda Powersports"
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover"
+                width={154}
+                height={54}
+                className="object-cover"
               />
-              <span className="text-xl">Outboard Motors</span>
-              <span className="text-xl">GO</span>
+              <span className="text-md font-bold">Outboard Motors</span>
+              <span className="text-xl underline underline-offset-5 font-bold">GO</span>
             </div>
-            <div className="flex flex-col bg-red-500 items-center w-1/2 h-58 shrink-0
-            relative
+            <div className="flex flex-col bg-red-700 items-center justify-center text-center p-8 w-1/2 h-58 shrink-0
+                relative
                 after:content-[''] after:absolute 
                 after:-top-3 after:left-1/2
                 after:w-6 after:h-6
                 after:border-t-2 after:border-r-2
-                after:bg-red-500
-                after:border-red-500
+                after:bg-red-700
+                after:border-red-700
                 after:rotate-45 after:-translate-x-1/2
+                gap-y-5
             ">
               <Image
                 src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Logos/Logo_Honda_Racing_v3.svg"
                 alt="Honda Powersports"
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover"
+                width={154}
+                height={54}
+                className="object-cover"
               />
-              <span className="text-xl">HPD is now HRC US</span>
-              <span className="text-xl">GO</span>
+              <span className="text-md font-bold">HPD is now HRC US</span>
+              <span className="text-xl underline underline-offset-5 font-bold">GO</span>
             </div>
           </div>
         </div>
