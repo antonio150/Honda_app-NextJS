@@ -217,9 +217,9 @@ export default function ListCar() {
             />
           </div>
           {/* section 1  */}
-          <div className="flex flex-col">
+          <div className="flex w-full flex-col">
             {/* section 2 */}
-            <div className="flex  min-w-0">
+            <div className="flex ">
               <div className=" flex flex-col bg-red-500 items-center w-58 h-58 shrink-0
                 relative
                 after:content-[''] after:absolute after:top-1/2 after:-right-3
@@ -358,9 +358,9 @@ export default function ListCar() {
           <Image
             src="/media/Honda-Homepage/Images/Homepage/Product-Offering/Pictures/desktop/homepage-brand-engine-desktop.jpg"
             alt="2026-honda-prelude-hybrid-boost-blue-pearl-three-quarter-LS"
-            width={400}
+            width={300}
             height={400}
-            className=" w-[350px] h-[232px] object-cover"
+            className=" w-[202px] h-[232px] object-cover"
           />
 
           <Image
